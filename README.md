@@ -1,6 +1,6 @@
 # ZenContact with Spring Cloud and Netflix OSS
 
-Simple web app implements as microservices with Spring Cloud and Netflix OSS.
+Simple web app implemented as microservices with Spring Cloud and Netflix OSS.
 Used at the Distributed Matters conference in Berlin, September 2015.
 
 ## How to use
