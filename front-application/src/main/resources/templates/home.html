@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zen Contact</title>
+
+    <link rel="stylesheet" href="{{contextPath}}/styles/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{contextPath}}/styles/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Spring Cloud</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <h1>Contacts</h1>
+        <p>
+            Response status:
+            {{#response.ok}}
+            <span class="glyphicon glyphicon-ok"></span>
+            {{/response.ok}}
+            {{^response.ok}}
+            <span class="glyphicon glyphicon-remove"></span>
+            {{/response.ok}}
+        </p>
+        <p>Response origin: {{response.origin}}</p>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#response.results}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+                <td>{{email}}</td>
+            </tr>
+            {{/response.results}}
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
